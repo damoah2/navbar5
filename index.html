@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Navbar 5</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body {
+                margin: 0px;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 16px;
+            }
+            .sidebar {
+                margin: 0px;
+                padding: 0px;
+                width: 300px;
+                background-color: #f1f1f1;
+                position: fixed;
+                height: 100%;
+                overflow: auto;
+            }
+            .sidebar a {
+                display: block;
+                color: black;
+                padding: 16px;
+                text-decoration: none;
+            }
+            .sidebar a.active {
+                background-color: red;
+                color: white;
+            }
+            .sidebar a:hover:not(.active){
+                background-color: #555;
+                color: white;
+            }
+            .search-container {
+                margin-left: 16px;
+            }
+            .sidebar input[ type=text] {
+                font-size: 14px;
+                }
+            @media screen and (max-width: 700px) {
+                .sidebar {
+                    width: 100%;
+                    height: auto;
+                    position: relative;
+                    margin: 0px;
+                }
+                .sidebar a {
+                    float: left;
+                }
+                input[ type=text], button {
+                    margin-top: 16px;
+                }
+                
+                .search-container {
+                    margin: 0px;
+                    padding: 0px;
+                    float: right;
+                    margin-right: 10px;
+                }
+                button {
+                    margin: 0px;
+                }
+            }
+
+            @media screen and (max-width: 600px) {
+                .sidebar a {
+                    text-align: center;
+                    float: none;
+                }
+                input[type=text], button {
+                    width: 100%;
+                    margin: 0px;
+                    float: none;
+                }
+                .search-container {
+                    float: none;
+                    text-align: center;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <nav class="sidebar">
+            <a class="active" href="">Home</a>
+            <a href="">Contact</a>
+            <a href="">Videos</a>
+            <a href="">News</a>
+            <div class="search-container">
+                <form>
+                    <input type="text" placeholder="Search..." name="search">
+                    <button type="submit">Search</button>
+                </form>
+            </div>
+        </nav>
+    </body>
+</html>
